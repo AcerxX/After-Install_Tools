@@ -1,4 +1,4 @@
-package after.install_tools;
+package code;
 
 /**
  * Author: MIHAI Alexandru, 2014
