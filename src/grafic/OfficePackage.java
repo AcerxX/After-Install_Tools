@@ -36,7 +36,6 @@ public class OfficePackage extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("After-Install v0.1");
-        setEnabled(false);
 
         jMenu1.setText("File");
 
