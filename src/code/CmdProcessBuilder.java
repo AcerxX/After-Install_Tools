@@ -19,8 +19,9 @@ import java.io.*;
 import java.util.*;
 
 public class CmdProcessBuilder {
-    private final ArrayList<String> appsPath;
-    private final ArrayList<String> appsName;
+    public ArrayList<String> appsPath;
+    public ArrayList<String> appsName;
+    public int i;
     
     public CmdProcessBuilder(){
         this.appsPath = new ArrayList<>();
@@ -30,10 +31,12 @@ public class CmdProcessBuilder {
     public void add(String app, String name){
         this.appsPath.add(app);
         this.appsName.add(name);
+        i=0;
     }
     
     public void openApps() throws InterruptedException,IOException{
-        for(int i=0;i<this.appsPath.size();i++){
+        for(i=0;i<this.appsPath.size();i++){
+            
             ArrayList<String> command = new ArrayList<>();
             command.add(this.appsPath.get(i));
 
@@ -49,6 +52,7 @@ public class CmdProcessBuilder {
             while ((line = br.readLine()) != null) {
                 System.out.println(line);
             }
+            grafic.GamerPackage.modProgressBar(i);
             System.out.println((String)this.appsName.get(i)+" program terminated!");
         }
     }
