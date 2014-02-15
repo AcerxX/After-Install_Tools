@@ -272,7 +272,6 @@
     <Component class="javax.swing.JProgressBar" name="jProgressBar1">
       <Properties>
         <Property name="value" type="int" value="55"/>
-        <Property name="string" type="java.lang.String" value="55%"/>
       </Properties>
     </Component>
   </SubComponents>
