@@ -34,9 +34,9 @@ public class CmdProcessBuilder {
         i=0;
     }
     
-    public void openApps() throws InterruptedException,IOException{
+    public void openApps(boolean modify) throws InterruptedException,IOException{
         for(i=0;i<this.appsPath.size();i++){
-            
+            System.out.println("::LOG:: Installing "+(String) appsName.get(i));
             ArrayList<String> command = new ArrayList<>();
             command.add(this.appsPath.get(i));
 
@@ -52,8 +52,15 @@ public class CmdProcessBuilder {
             while ((line = br.readLine()) != null) {
                 System.out.println(line);
             }
-            grafic.GamerPackage.modProgressBar(i);
-            System.out.println((String)this.appsName.get(i)+" program terminated!");
+            if(modify){
+                grafic.GamerPackage.modProgressBar(i+1);
+                grafic.GamerPackage.modCheckedBox(i+1);
+            }
+            System.out.println("::LOG:: "+(String)this.appsName.get(i)+" program terminated!");
+            
+            //Workaround for Office missing Installer
+            if(i==4)
+                i=i+1;
         }
     }
     

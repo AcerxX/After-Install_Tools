@@ -16,12 +16,7 @@
 package grafic;
 
 import code.CmdProcessBuilder;
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -47,6 +42,7 @@ public class GamerPackage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jFrame1 = new javax.swing.JFrame();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -77,8 +73,19 @@ public class GamerPackage extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
 
+        javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
+        jFrame1.getContentPane().setLayout(jFrame1Layout);
+        jFrame1Layout.setHorizontalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jFrame1Layout.setVerticalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("After-Install v0.1");
+        setTitle("After-Install v0.5 BETA");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Applications to be installed:");
@@ -117,21 +124,50 @@ public class GamerPackage extends javax.swing.JFrame {
         jLabel11.setText("uTorrent");
 
         jButton2.setText("League of Legends");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
+        jCheckBox1.setSelected(true);
+        jCheckBox1.setText("Done");
+        jCheckBox1.setToolTipText("");
         jCheckBox1.setEnabled(false);
 
+        jCheckBox2.setSelected(true);
+        jCheckBox2.setText("Done");
+        jCheckBox2.setToolTipText("");
         jCheckBox2.setEnabled(false);
 
+        jCheckBox3.setSelected(true);
+        jCheckBox3.setText("Done");
+        jCheckBox3.setToolTipText("");
         jCheckBox3.setEnabled(false);
 
+        jCheckBox4.setSelected(true);
+        jCheckBox4.setText("Done");
+        jCheckBox4.setToolTipText("");
         jCheckBox4.setEnabled(false);
 
+        jCheckBox5.setSelected(true);
+        jCheckBox5.setText("Done");
+        jCheckBox5.setToolTipText("");
         jCheckBox5.setEnabled(false);
 
+        jCheckBox6.setSelected(true);
+        jCheckBox6.setText("Done");
+        jCheckBox6.setToolTipText("");
         jCheckBox6.setEnabled(false);
 
+        jCheckBox7.setSelected(true);
+        jCheckBox7.setText("Done");
+        jCheckBox7.setToolTipText("");
         jCheckBox7.setEnabled(false);
 
+        jCheckBox8.setSelected(true);
+        jCheckBox8.setText("Done");
+        jCheckBox8.setToolTipText("");
         jCheckBox8.setEnabled(false);
 
         jButton3.setText("START");
@@ -195,7 +231,7 @@ public class GamerPackage extends javax.swing.JFrame {
                     .addComponent(jCheckBox6)
                     .addComponent(jCheckBox7)
                     .addComponent(jCheckBox1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(64, 64, 64)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -224,21 +260,22 @@ public class GamerPackage extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(59, 59, 59)
                         .addComponent(jLabel9)
-                        .addGap(14, 14, 14)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGap(19, 19, 19)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
                             .addComponent(jCheckBox8))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jCheckBox2)
                             .addComponent(jLabel2))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4)
-                            .addComponent(jCheckBox4))
+                            .addComponent(jCheckBox4)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
+                                .addGap(7, 7, 7)
                                 .addComponent(jLabel5)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jLabel6))
@@ -249,6 +286,7 @@ public class GamerPackage extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
+                                .addGap(7, 7, 7)
                                 .addComponent(jLabel7)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jLabel8)
@@ -300,35 +338,107 @@ public class GamerPackage extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        jButton3.setEnabled(false);
+        jButton3.update(jButton3.getGraphics());
         CmdProcessBuilder processList = new CmdProcessBuilder();
         if("x64".equals((String)System.getProperty("os.arch"))){
             processList.add("setupFiles\\ChromeSetup.exe", "Google Chrome");
             processList.add("setupFiles\\SkypeSetup.exe", "Skype");
-            
+            processList.add("setupFiles\\winrar-x64-501.exe", "WinRAR x64");
+            processList.add("setupFiles\\vlc-64-2.1.2.exe", "VLC Media Player x64");
+            processList.add("setupFiles\\chromeinstall-7u51", "Java for Chrome 7");
+            processList.add("setupFiles\\Office_not_found.jar", "Office 2013 x64");
+            processList.add("setupFiles\\adobe-reader-11.0.04.exe", "Adobe Reader 11");
+            processList.add("setupFiles\\uTorrent.exe", "uTorrent");
         }
         else{
             processList.add("setupFiles\\ChromeSetup.exe", "Google Chrome");
             processList.add("setupFiles\\SkypeSetup.exe", "Skype");
+            processList.add("setupFiles\\wrar501.exe", "WinRAR x86");
+            processList.add("setupFiles\\vlc-32-2.1.2.exe", "VLC Media Player x86");
+            processList.add("setupFiles\\chromeinstall-7u51", "Java for Chrome 7");
+            processList.add("setupFiles\\Office_not_found.jar", "Office 2013 x86");
+            processList.add("setupFiles\\adobe-reader-11.0.04.exe", "Adobe Reader 11");
+            processList.add("setupFiles\\uTorrent.exe", "uTorrent");
             try {
-                processList.openApps();
-            } catch (InterruptedException ex) {
-                Logger.getLogger(GamerPackage.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (IOException ex) {
+                processList.openApps(true);
+            } catch (    InterruptedException | IOException ex) {
                 Logger.getLogger(GamerPackage.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        jButton2.setEnabled(false);
+        jButton2.update(jButton2.getGraphics());
+        CmdProcessBuilder processList = new CmdProcessBuilder();
+        processList.add("setupFiles\\LeagueofLegends_EUNE_Installer_06_17_13.exe", "League of Legends");
+        try {
+                processList.openApps(false);
+            } catch (    InterruptedException | IOException ex) {
+                Logger.getLogger(GamerPackage.class.getName()).log(Level.SEVERE, null, ex);
+            }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     public static void modProgressBar(int n){
-        switch(n+1){
-                    case 0: jProgressBar1.setValue(0);
+        switch(n){
+                    case 0: jProgressBar1.setValue(0);                        
                         break;
-                    case 1: jProgressBar1.setValue(50);
+                    case 1: jProgressBar1.setValue(12);
                         jProgressBar1.update(jProgressBar1.getGraphics());
                         break;
-                    case 2: jProgressBar1.setValue(100);
+                    case 2: jProgressBar1.setValue(25);
+                        jProgressBar1.update(jProgressBar1.getGraphics());
+                        break;
+                    case 3: jProgressBar1.setValue(37);
+                        jProgressBar1.update(jProgressBar1.getGraphics());
+                        break;
+                    case 4: jProgressBar1.setValue(50);
+                        jProgressBar1.update(jProgressBar1.getGraphics());
+                        break;
+                    case 5: jProgressBar1.setValue(62);
+                        jProgressBar1.update(jProgressBar1.getGraphics());
+                        break;
+                    case 6: jProgressBar1.setValue(75);
+                        jProgressBar1.update(jProgressBar1.getGraphics());
+                        break;
+                    case 7: jProgressBar1.setValue(87);
+                        jProgressBar1.update(jProgressBar1.getGraphics());
+                        break;
+                    case 8: jProgressBar1.setValue(100);
+                        jProgressBar1.update(jProgressBar1.getGraphics());
                         break;
                 }
+    }
+    
+    public static void modCheckedBox(int n){
+        switch(n){
+            case 1: jCheckBox8.setEnabled(true);
+                jCheckBox8.update(jCheckBox8.getGraphics());
+                break;
+            case 2: jCheckBox2.setEnabled(true);
+                jCheckBox2.update(jCheckBox2.getGraphics());
+                break;
+            case 3: jCheckBox4.setEnabled(true);
+                jCheckBox4.update(jCheckBox4.getGraphics());
+                break;
+            case 4: jCheckBox1.setEnabled(true);
+                jCheckBox1.update(jCheckBox1.getGraphics());
+                break;
+            case 5: jCheckBox5.setEnabled(true);
+                jCheckBox5.update(jCheckBox5.getGraphics());
+                break;
+            case 6: jCheckBox6.setEnabled(true);
+                jCheckBox6.update(jCheckBox6.getGraphics());
+                break;
+            case 7: jCheckBox7.setEnabled(true);
+                jCheckBox7.update(jCheckBox7.getGraphics());
+                break;
+            case 8: jCheckBox3.setEnabled(true);
+                jCheckBox3.update(jCheckBox3.getGraphics());
+                break;
+        }
     }
     /**
      * @param args the command line arguments
@@ -342,38 +452,33 @@ public class GamerPackage extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GamerPackage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GamerPackage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GamerPackage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(GamerPackage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new GamerPackage().setVisible(true);
             }
         });
-        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JCheckBox jCheckBox6;
-    private javax.swing.JCheckBox jCheckBox7;
-    private javax.swing.JCheckBox jCheckBox8;
+    private static javax.swing.JCheckBox jCheckBox1;
+    private static javax.swing.JCheckBox jCheckBox2;
+    private static javax.swing.JCheckBox jCheckBox3;
+    private static javax.swing.JCheckBox jCheckBox4;
+    private static javax.swing.JCheckBox jCheckBox5;
+    private static javax.swing.JCheckBox jCheckBox6;
+    private static javax.swing.JCheckBox jCheckBox7;
+    private static javax.swing.JCheckBox jCheckBox8;
+    private javax.swing.JFrame jFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

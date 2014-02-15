@@ -1,6 +1,6 @@
 After-Install Tools is the well needed application to use after a clean install of Windows (8.x) OS.
 Curently it comes in 3 forms, Standard, Office and Gamer, in order to deliver the optimal, yet complete set of applications required for every day use of your PC.
-At this point, the source of this app WILL NOT CONTAIN ANY SETUP FILE presented in it's interface.
+At this point, building from source the app will not create any iso file, just the files cantained by the iso.
   
 After-Install Tools is an Open Source application under Apache License v2.0 presented below:
 
