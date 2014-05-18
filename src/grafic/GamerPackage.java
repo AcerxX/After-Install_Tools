@@ -345,8 +345,8 @@ public class GamerPackage extends javax.swing.JFrame {
             processList.add("setupFiles\\ChromeSetup.exe", "Google Chrome");
             processList.add("setupFiles\\SkypeSetup.exe", "Skype");
             processList.add("setupFiles\\winrar-x64-501.exe", "WinRAR x64");
-            processList.add("setupFiles\\vlc-64-2.1.2.exe", "VLC Media Player x64");
-            processList.add("setupFiles\\chromeinstall-7u51", "Java for Chrome 7");
+            processList.add("setupFiles\\vlc-2.1.3-win64.exe", "VLC Media Player x64");
+            processList.add("setupFiles\\chromeinstall-7u55.exe", "Java for Chrome 7");
             processList.add("setupFiles\\Office_not_found.jar", "Office 2013 x64");
             processList.add("setupFiles\\adobe-reader-11.0.04.exe", "Adobe Reader 11");
             processList.add("setupFiles\\uTorrent.exe", "uTorrent");
@@ -355,8 +355,8 @@ public class GamerPackage extends javax.swing.JFrame {
             processList.add("setupFiles\\ChromeSetup.exe", "Google Chrome");
             processList.add("setupFiles\\SkypeSetup.exe", "Skype");
             processList.add("setupFiles\\wrar501.exe", "WinRAR x86");
-            processList.add("setupFiles\\vlc-32-2.1.2.exe", "VLC Media Player x86");
-            processList.add("setupFiles\\chromeinstall-7u51", "Java for Chrome 7");
+            processList.add("setupFiles\\vlc-2.1.3-win32.exe", "VLC Media Player x86");
+            processList.add("setupFiles\\chromeinstall-7u55.exe", "Java for Chrome 7");
             processList.add("setupFiles\\Office_not_found.jar", "Office 2013 x86");
             processList.add("setupFiles\\adobe-reader-11.0.04.exe", "Adobe Reader 11");
             processList.add("setupFiles\\uTorrent.exe", "uTorrent");
