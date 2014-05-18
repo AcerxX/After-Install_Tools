@@ -366,6 +366,8 @@ public class GamerPackage extends javax.swing.JFrame {
                 Logger.getLogger(GamerPackage.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+        jButton3.setEnabled(true);
+        jButton3.update(jButton3.getGraphics());
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -373,7 +375,7 @@ public class GamerPackage extends javax.swing.JFrame {
         jButton2.setEnabled(false);
         jButton2.update(jButton2.getGraphics());
         CmdProcessBuilder processList = new CmdProcessBuilder();
-        processList.add("setupFiles\\LeagueofLegends_EUNE_Installer_06_17_13.exe", "League of Legends");
+        processList.add("setupFiles\\LeagueofLegends_EUNE_Installer_04_21_14.exe", "League of Legends");
         try {
                 processList.openApps(false);
             } catch (    InterruptedException | IOException ex) {
