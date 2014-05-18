@@ -348,7 +348,7 @@ public class GamerPackage extends javax.swing.JFrame {
             processList.add("setupFiles\\vlc-2.1.3-win64.exe", "VLC Media Player x64");
             processList.add("setupFiles\\chromeinstall-7u55.exe", "Java for Chrome 7");
             processList.add("setupFiles\\Office_not_found.jar", "Office 2013 x64");
-            processList.add("setupFiles\\adobe-reader-11.0.04.exe", "Adobe Reader 11");
+            processList.add("setupFiles\\install_reader11_en_mssd_aaa_aih.exe", "Adobe Reader 11");
             processList.add("setupFiles\\uTorrent.exe", "uTorrent");
         }
         else{
@@ -358,7 +358,7 @@ public class GamerPackage extends javax.swing.JFrame {
             processList.add("setupFiles\\vlc-2.1.3-win32.exe", "VLC Media Player x86");
             processList.add("setupFiles\\chromeinstall-7u55.exe", "Java for Chrome 7");
             processList.add("setupFiles\\Office_not_found.jar", "Office 2013 x86");
-            processList.add("setupFiles\\adobe-reader-11.0.04.exe", "Adobe Reader 11");
+            processList.add("setupFiles\\install_reader11_en_mssd_aaa_aih.exe", "Adobe Reader 11");
             processList.add("setupFiles\\uTorrent.exe", "uTorrent");
             try {
                 processList.openApps(true);
