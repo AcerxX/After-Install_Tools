@@ -312,8 +312,8 @@ public class GamerPackage extends javax.swing.JFrame {
                             .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(44, 44, 44)
                 .addComponent(jButton3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
-                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -341,6 +341,7 @@ public class GamerPackage extends javax.swing.JFrame {
         jButton3.setEnabled(false);
         jButton3.update(jButton3.getGraphics());
         CmdProcessBuilder processList = new CmdProcessBuilder();
+        
         if("x64".equals((String)System.getProperty("os.arch"))){
             processList.add("setupFiles\\ChromeSetup.exe", "Google Chrome");
             processList.add("setupFiles\\SkypeSetup.exe", "Skype");
@@ -361,11 +362,12 @@ public class GamerPackage extends javax.swing.JFrame {
             processList.add("setupFiles\\install_reader11_en_mssd_aaa_aih.exe", "Adobe Reader 11");
             processList.add("setupFiles\\uTorrent.exe", "uTorrent");
             try {
-                processList.openApps(true);
+                processList.openApps(true,4, "gamer");
             } catch (    InterruptedException | IOException ex) {
                 Logger.getLogger(GamerPackage.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+        
         jButton3.setEnabled(true);
         jButton3.update(jButton3.getGraphics());
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -377,7 +379,7 @@ public class GamerPackage extends javax.swing.JFrame {
         CmdProcessBuilder processList = new CmdProcessBuilder();
         processList.add("setupFiles\\LeagueofLegends_EUNE_Installer_04_21_14.exe", "League of Legends");
         try {
-                processList.openApps(false);
+                processList.openApps(false,1, "gamer");
             } catch (    InterruptedException | IOException ex) {
                 Logger.getLogger(GamerPackage.class.getName()).log(Level.SEVERE, null, ex);
             }

@@ -68,7 +68,6 @@ public class Splash extends javax.swing.JFrame {
 
         jButton3.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
         jButton3.setText("Office Package");
-        jButton3.setEnabled(false);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);

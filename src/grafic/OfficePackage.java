@@ -14,6 +14,10 @@
 **/
 
 package grafic;
+import code.CmdProcessBuilder;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -49,6 +53,7 @@ public class OfficePackage extends javax.swing.JFrame {
         jCheckBox1 = new javax.swing.JCheckBox();
         jLabel1 = new javax.swing.JLabel();
         jProgressBar1 = new javax.swing.JProgressBar();
+        jButton3 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -58,12 +63,25 @@ public class OfficePackage extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("After-Install v0.1");
 
+        jCheckBox7.setSelected(true);
+        jCheckBox7.setText("Done");
         jCheckBox7.setEnabled(false);
 
+        jCheckBox4.setSelected(true);
+        jCheckBox4.setText("Done");
         jCheckBox4.setEnabled(false);
 
+        jCheckBox3.setSelected(true);
+        jCheckBox3.setText("Done");
         jCheckBox3.setEnabled(false);
+        jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox3ActionPerformed(evt);
+            }
+        });
 
+        jCheckBox6.setSelected(true);
+        jCheckBox6.setText("Done");
         jCheckBox6.setEnabled(false);
 
         jLabel5.setText("VLC Media Player");
@@ -76,13 +94,21 @@ public class OfficePackage extends javax.swing.JFrame {
 
         jLabel3.setText("Google Chrome");
 
+        jCheckBox1.setSelected(true);
+        jCheckBox1.setText("Done");
         jCheckBox1.setEnabled(false);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Applications to be installed:");
 
-        jProgressBar1.setValue(55);
         jProgressBar1.setAutoscrolls(true);
+
+        jButton3.setText("START");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jMenu1.setText("File");
 
@@ -133,16 +159,20 @@ public class OfficePackage extends javax.swing.JFrame {
                                     .addComponent(jLabel8))
                                 .addGap(40, 40, 40)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCheckBox3)
+                                    .addComponent(jCheckBox3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jCheckBox4)
                                     .addComponent(jCheckBox6)
                                     .addComponent(jCheckBox7)
                                     .addComponent(jCheckBox1))))
-                        .addGap(0, 159, Short.MAX_VALUE))
+                        .addGap(0, 153, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jProgressBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(214, 214, 214)
+                .addComponent(jButton3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -169,8 +199,10 @@ public class OfficePackage extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jCheckBox7)
                     .addComponent(jLabel8))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 168, Short.MAX_VALUE)
-                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44)
+                .addComponent(jButton3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
+                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -188,6 +220,81 @@ public class OfficePackage extends javax.swing.JFrame {
         System.out.println("::TRIGGER:: Exit Office Package");
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        jButton3.setEnabled(false);
+        jButton3.update(jButton3.getGraphics());
+        CmdProcessBuilder processList = new CmdProcessBuilder();
+        
+        if("x64".equals((String)System.getProperty("os.arch"))){
+            processList.add("setupFiles\\ChromeSetup.exe", "Google Chrome");
+            processList.add("setupFiles\\winrar-x64-501.exe", "WinRAR x64");
+            processList.add("setupFiles\\vlc-2.1.3-win64.exe", "VLC Media Player x64");
+            processList.add("setupFiles\\Office_not_found.jar", "Office 2013 x64");
+            processList.add("setupFiles\\install_reader11_en_mssd_aaa_aih.exe", "Adobe Reader 11");
+        }
+        else{
+            processList.add("setupFiles\\ChromeSetup.exe", "Google Chrome");
+            processList.add("setupFiles\\wrar501.exe", "WinRAR x86");
+            processList.add("setupFiles\\vlc-2.1.3-win32.exe", "VLC Media Player x86");
+            processList.add("setupFiles\\Office_not_found.jar", "Office 2013 x86");
+            processList.add("setupFiles\\install_reader11_en_mssd_aaa_aih.exe", "Adobe Reader 11");
+            try {
+                processList.openApps(true,2,"office");
+            } catch (InterruptedException | IOException ex) {
+                Logger.getLogger(GamerPackage.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        
+        jButton3.setEnabled(true);
+        jButton3.update(jButton3.getGraphics());
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox3ActionPerformed
+
+    public static void modProgressBar(int n){
+        switch(n){
+                    case 0: jProgressBar1.setValue(0);                        
+                        break;
+                    case 1: jProgressBar1.setValue(20);
+                        jProgressBar1.update(jProgressBar1.getGraphics());
+                        break;
+                    case 2: jProgressBar1.setValue(40);
+                        jProgressBar1.update(jProgressBar1.getGraphics());
+                        break;
+                    case 3: jProgressBar1.setValue(60);
+                        jProgressBar1.update(jProgressBar1.getGraphics());
+                        break;
+                    case 4: jProgressBar1.setValue(80);
+                        jProgressBar1.update(jProgressBar1.getGraphics());
+                        break;
+                    case 5: jProgressBar1.setValue(100);
+                        jProgressBar1.update(jProgressBar1.getGraphics());
+                        break;
+                }
+    }
+    public static void modCheckedBox(int n){
+        switch(n){
+            case 1: jCheckBox3.setEnabled(true);
+                jCheckBox3.update(jCheckBox3.getGraphics());
+                break;
+            case 2: jCheckBox4.setEnabled(true);
+                jCheckBox4.update(jCheckBox4.getGraphics());
+                break;
+            case 3: jCheckBox1.setEnabled(true);
+                jCheckBox1.update(jCheckBox1.getGraphics());
+                break;
+            case 4: jCheckBox6.setEnabled(true);
+                jCheckBox6.update(jCheckBox6.getGraphics());
+                break;
+            case 5: jCheckBox7.setEnabled(true);
+                jCheckBox7.update(jCheckBox7.getGraphics());
+                break;
+        }
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -220,11 +327,12 @@ public class OfficePackage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JCheckBox jCheckBox6;
-    private javax.swing.JCheckBox jCheckBox7;
+    private javax.swing.JButton jButton3;
+    private static javax.swing.JCheckBox jCheckBox1;
+    private static javax.swing.JCheckBox jCheckBox3;
+    private static javax.swing.JCheckBox jCheckBox4;
+    private static javax.swing.JCheckBox jCheckBox6;
+    private static javax.swing.JCheckBox jCheckBox7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -236,6 +344,6 @@ public class OfficePackage extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JProgressBar jProgressBar1;
+    private static javax.swing.JProgressBar jProgressBar1;
     // End of variables declaration//GEN-END:variables
 }
