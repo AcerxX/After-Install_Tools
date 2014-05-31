@@ -42,7 +42,6 @@ public class CmdProcessBuilder {
 
 
             ProcessBuilder builder = new ProcessBuilder(command);
-            Map<String, String> environ = builder.environment();
 
             Process process = builder.start();
             InputStream is = process.getInputStream();
@@ -73,11 +72,4 @@ public class CmdProcessBuilder {
                 i=i+1;
         }
     }
-    
-    /*public static void main(String args[]) throws InterruptedException, IOException{
-        CmdProcessBuilder s = new CmdProcessBuilder();
-        s.add("C:\\SkypeSetup.exe","Skype");
-        s.add("C:\\uTorrent.exe", "uTorrent");
-        s.openApps();
-    }*/
 }
