@@ -120,8 +120,6 @@ public class StandardPackage extends javax.swing.JFrame {
         jCheckBox1.setText("Done");
         jCheckBox1.setEnabled(false);
 
-        jProgressBar1.setValue(55);
-
         jButton3.setText("START");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -275,19 +273,25 @@ public class StandardPackage extends javax.swing.JFrame {
 
         if("x64".equals((String)System.getProperty("os.arch"))){
             processList.add("setupFiles\\ChromeSetup.exe", "Google Chrome");
+            processList.add("setupFiles\\SkypeSetup.exe", "Skype");
             processList.add("setupFiles\\winrar-x64-501.exe", "WinRAR x64");
             processList.add("setupFiles\\vlc-2.1.3-win64.exe", "VLC Media Player x64");
+            processList.add("setupFiles\\chromeinstall-7u55.exe", "Java for Chrome 7");
             processList.add("setupFiles\\Office_not_found.jar", "Office 2013 x64");
             processList.add("setupFiles\\install_reader11_en_mssd_aaa_aih.exe", "Adobe Reader 11");
+            processList.add("setupFiles\\uTorrent.exe", "uTorrent");
         }
         else{
             processList.add("setupFiles\\ChromeSetup.exe", "Google Chrome");
+            processList.add("setupFiles\\SkypeSetup.exe", "Skype");
             processList.add("setupFiles\\wrar501.exe", "WinRAR x86");
             processList.add("setupFiles\\vlc-2.1.3-win32.exe", "VLC Media Player x86");
+            processList.add("setupFiles\\chromeinstall-7u55.exe", "Java for Chrome 7");
             processList.add("setupFiles\\Office_not_found.jar", "Office 2013 x86");
             processList.add("setupFiles\\install_reader11_en_mssd_aaa_aih.exe", "Adobe Reader 11");
+            processList.add("setupFiles\\uTorrent.exe", "uTorrent");
             try {
-                processList.openApps(true,2,"office");
+                processList.openApps(true,4,"standard");
             } catch (InterruptedException | IOException ex) {
                 Logger.getLogger(GamerPackage.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -301,39 +305,48 @@ public class StandardPackage extends javax.swing.JFrame {
         switch(n){
                     case 0: jProgressBar1.setValue(0);                        
                         break;
-                    case 1: jProgressBar1.setValue(20);
+                    case 1: jProgressBar1.setValue(12);
                         jProgressBar1.update(jProgressBar1.getGraphics());
                         break;
-                    case 2: jProgressBar1.setValue(40);
+                    case 2: jProgressBar1.setValue(25);
                         jProgressBar1.update(jProgressBar1.getGraphics());
                         break;
-                    case 3: jProgressBar1.setValue(60);
+                    case 3: jProgressBar1.setValue(37);
                         jProgressBar1.update(jProgressBar1.getGraphics());
                         break;
-                    case 4: jProgressBar1.setValue(80);
+                    case 4: jProgressBar1.setValue(50);
                         jProgressBar1.update(jProgressBar1.getGraphics());
                         break;
-                    case 5: jProgressBar1.setValue(100);
+                    case 5: jProgressBar1.setValue(62);
+                        jProgressBar1.update(jProgressBar1.getGraphics());
+                        break;
+                    case 6: jProgressBar1.setValue(75);
+                        jProgressBar1.update(jProgressBar1.getGraphics());
+                        break;
+                    case 7: jProgressBar1.setValue(87);
+                        jProgressBar1.update(jProgressBar1.getGraphics());
+                        break;
+                    case 8: jProgressBar1.setValue(100);
                         jProgressBar1.update(jProgressBar1.getGraphics());
                         break;
                 }
     }
     public static void modCheckedBox(int n){
         switch(n){
-            case 1: jCheckBox3.setEnabled(true);
+            case 1: jCheckBox8.setEnabled(true);
+                jCheckBox8.update(jCheckBox8.getGraphics());
+                break;
+            case 2: jCheckBox2.setEnabled(true);
+                jCheckBox2.update(jCheckBox2.getGraphics());
+                break;
+            case 3: jCheckBox3.setEnabled(true);
                 jCheckBox3.update(jCheckBox3.getGraphics());
                 break;
-            case 2: jCheckBox4.setEnabled(true);
+            case 4: jCheckBox4.setEnabled(true);
                 jCheckBox4.update(jCheckBox4.getGraphics());
                 break;
-            case 3: jCheckBox1.setEnabled(true);
+            case 5: jCheckBox1.setEnabled(true);
                 jCheckBox1.update(jCheckBox1.getGraphics());
-                break;
-            case 4: jCheckBox6.setEnabled(true);
-                jCheckBox6.update(jCheckBox6.getGraphics());
-                break;
-            case 5: jCheckBox7.setEnabled(true);
-                jCheckBox7.update(jCheckBox7.getGraphics());
                 break;
         }
     }
@@ -349,13 +362,7 @@ public class StandardPackage extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(StandardPackage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(StandardPackage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(StandardPackage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(StandardPackage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
@@ -370,14 +377,14 @@ public class StandardPackage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton3;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JCheckBox jCheckBox6;
-    private javax.swing.JCheckBox jCheckBox7;
-    private javax.swing.JCheckBox jCheckBox8;
+    private static javax.swing.JCheckBox jCheckBox1;
+    private static javax.swing.JCheckBox jCheckBox2;
+    private static javax.swing.JCheckBox jCheckBox3;
+    private static javax.swing.JCheckBox jCheckBox4;
+    private static javax.swing.JCheckBox jCheckBox5;
+    private static javax.swing.JCheckBox jCheckBox6;
+    private static javax.swing.JCheckBox jCheckBox7;
+    private static javax.swing.JCheckBox jCheckBox8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
@@ -392,6 +399,6 @@ public class StandardPackage extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JProgressBar jProgressBar1;
+    private static javax.swing.JProgressBar jProgressBar1;
     // End of variables declaration//GEN-END:variables
 }

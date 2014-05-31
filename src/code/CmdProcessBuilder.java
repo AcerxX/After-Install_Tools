@@ -60,6 +60,9 @@ public class CmdProcessBuilder {
                     case "office":  grafic.OfficePackage.modProgressBar(i+1);
                                     grafic.OfficePackage.modCheckedBox(i+1);
                                     break;
+                    case "standard": grafic.StandardPackage.modProgressBar(i+1);
+                                    grafic.StandardPackage.modCheckedBox(i+1);
+                                    break;
                 }
                 
             }
