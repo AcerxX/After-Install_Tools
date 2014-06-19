@@ -61,7 +61,7 @@ public class OfficePackage extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("After-Install v0.1");
+        setTitle("After-Install v1.1.2");
 
         jCheckBox7.setSelected(true);
         jCheckBox7.setText("Done");
