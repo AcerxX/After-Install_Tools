@@ -16,6 +16,7 @@
 package code2;
 
 import java.awt.Color;
+import javax.swing.UnsupportedLookAndFeelException;
 
 /**
  *
@@ -25,7 +26,7 @@ public class AfterInstall_Tools_v2 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException, ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
         // TODO code application logic here
         System.out.println("<----Copywright(C) 2014 Mihai Alexandru--->");
         System.out.println("::LOG:: Works!!!");
@@ -37,10 +38,28 @@ public class AfterInstall_Tools_v2 {
         splash.setBackground(new Color(1.0f,1.0f,1.0f,0.0f));
         Thread.sleep(3000);
         splash.dispose();
+        System.out.println("::LOG:: Splash screen shown!");
         
         /* Activate the main app with a dropdown */
+        System.out.println("::LOG:: Openning main app...");
         grafic2.MainApp mainApp = new grafic2.MainApp();
+        for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Windows".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        
+        System.out.println("::LOG:: Setting visibilities...");
+        mainApp.jPanel1.setVisible(false);
+        mainApp.jPanel2.setVisible(false);
+        mainApp.presetPanel.setVisible(false);
+        mainApp.jPanel2.disable();
+        mainApp.presetPanel.disable();        
         mainApp.setVisible(true);
+        
+        /* Dropdown */
+        System.out.println("::LOG:: Dropping down the app...");
         mainApp.setSize(350, 0);
         while(true){
             if(mainApp.getSize().height == 550)
@@ -52,5 +71,7 @@ public class AfterInstall_Tools_v2 {
             mainApp.repaint();
             Thread.sleep(1);
         }
+        mainApp.jPanel1.setVisible(true);
+        System.out.println("::LOG:: Success!");
     }
 }
