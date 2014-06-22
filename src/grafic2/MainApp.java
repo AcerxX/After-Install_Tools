@@ -47,13 +47,12 @@ public class MainApp extends javax.swing.JFrame {
 
         jButton1.setText("Next");
 
-        jTextArea1.setColumns(20);
+        jTextArea1.setColumns(19);
         jTextArea1.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jTextArea1.setRows(5);
         jTextArea1.setText("     Hello. \n\n     By clicking on the Next button you agree with\nthe Terms of Use and Conditions of Google\nChrome, Skype, WinRar, VLC Media Player, Java,\nAdobe Reader, uTorrent and League of Legends.\n\n     This is an very ealry build of the version 2 of the\nAfter-Install Tools, that is not recommended for\nuse. This build is for VISUAL DEVELOPMENT ONLY\nand has NO UTILITY.\n\n     If you want to use After-Install Tools please use\nthe first version of the app located in the \"code\"\nand \"grafic\" packages. ");
-        jTextArea1.setAutoscrolls(false);
         jTextArea1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jTextArea1.setEnabled(false);
+        jTextArea1.setDragEnabled(true);
         jTextArea1.setFocusable(false);
         jScrollPane1.setViewportView(jTextArea1);
 
