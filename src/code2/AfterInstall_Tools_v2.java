@@ -15,6 +15,8 @@
 
 package code2;
 
+import java.awt.Color;
+
 /**
  *
  * @author Andreea
@@ -26,11 +28,17 @@ public class AfterInstall_Tools_v2 {
     public static void main(String[] args) throws InterruptedException {
         // TODO code application logic here
         System.out.println("<----Copywright(C) 2014 Mihai Alexandru--->");
-        System.out.println("::LOG:: Works!");
-        System.out.println("::LOG:: Starting splash app...");
+        System.out.println("::LOG:: Works!!!");
+        System.out.println("::LOG:: Starting splash screen version 2.0...");
+        
+        /* Showing splash screen for 2 seconds */
         grafic2.SplashV2 splash = new grafic2.SplashV2();
         splash.setVisible(true);
-        Thread.sleep(2000);
+        splash.setBackground(new Color(1.0f,1.0f,1.0f,0.0f));
+        Thread.sleep(3000);
         splash.dispose();
+        
+        grafic.Splash x = new grafic.Splash();
+        x.setVisible(true);
     }
 }

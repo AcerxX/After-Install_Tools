@@ -31,7 +31,6 @@ public class SplashV2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        SpashPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -41,61 +40,12 @@ public class SplashV2 extends javax.swing.JFrame {
         setUndecorated(true);
         setResizable(false);
 
-        SpashPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.WAIT_CURSOR));
-        SpashPanel.setOpaque(false);
-        SpashPanel.addComponentListener(new java.awt.event.ComponentAdapter() {
-            public void componentShown(java.awt.event.ComponentEvent evt) {
-                SpashPanelComponentShown(evt);
-            }
-        });
-        SpashPanel.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                SpashPanelFocusGained(evt);
-            }
-        });
-
-        jLabel1.setFont(new java.awt.Font("Tempus Sans ITC", 0, 36)); // NOI18N
-        jLabel1.setText("After-Install Tools");
-        jLabel1.addComponentListener(new java.awt.event.ComponentAdapter() {
-            public void componentShown(java.awt.event.ComponentEvent evt) {
-                jLabel1ComponentShown(evt);
-            }
-        });
-
-        javax.swing.GroupLayout SpashPanelLayout = new javax.swing.GroupLayout(SpashPanel);
-        SpashPanel.setLayout(SpashPanelLayout);
-        SpashPanelLayout.setHorizontalGroup(
-            SpashPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SpashPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addContainerGap())
-        );
-        SpashPanelLayout.setVerticalGroup(
-            SpashPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SpashPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addContainerGap(13, Short.MAX_VALUE))
-        );
-
-        getContentPane().add(SpashPanel, java.awt.BorderLayout.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Andreea\\Documents\\GitHub\\After-Install_Tools\\data\\images\\cooltext1616994426.png")); // NOI18N
+        getContentPane().add(jLabel1, java.awt.BorderLayout.CENTER);
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jLabel1ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jLabel1ComponentShown
-
-    }//GEN-LAST:event_jLabel1ComponentShown
-
-    private void SpashPanelComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_SpashPanelComponentShown
-
-    }//GEN-LAST:event_SpashPanelComponentShown
-
-    private void SpashPanelFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_SpashPanelFocusGained
-
-    }//GEN-LAST:event_SpashPanelFocusGained
 
     /**
      * @param args the command line arguments
@@ -133,7 +83,6 @@ public class SplashV2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel SpashPanel;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

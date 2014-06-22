@@ -15,16 +15,23 @@
 
 package code;
 
+import java.awt.Color;
+
 public class AfterInstall_Tools {
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         // TODO code application logic here
         System.out.println("<----Copywright(C) 2014 Mihai Alexandru--->");
         System.out.println("::LOG:: Works!");
         System.out.println("::LOG:: Starting splash app...");
+        grafic2.SplashV2 splash = new grafic2.SplashV2();
+        splash.setVisible(true);
+        splash.setBackground(new Color(1.0f,1.0f,1.0f,0.0f));
+        Thread.sleep(3000);
+        splash.dispose();
         grafic.Splash.main(new String[0]);
     }
     
