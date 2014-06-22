@@ -43,6 +43,16 @@ public class SplashV2 extends javax.swing.JFrame {
 
         SpashPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.WAIT_CURSOR));
         SpashPanel.setOpaque(false);
+        SpashPanel.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                SpashPanelComponentShown(evt);
+            }
+        });
+        SpashPanel.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                SpashPanelFocusGained(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Tempus Sans ITC", 0, 36)); // NOI18N
         jLabel1.setText("After-Install Tools");
@@ -66,7 +76,7 @@ public class SplashV2 extends javax.swing.JFrame {
             .addGroup(SpashPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
         getContentPane().add(SpashPanel, java.awt.BorderLayout.CENTER);
@@ -76,18 +86,16 @@ public class SplashV2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel1ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jLabel1ComponentShown
-        
-        /* Sleep the splash screen for 2 seconds */
-        try {
-            // TODO add your handling code here:
-            Thread.sleep(2000);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(SplashV2.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        /* Continue to main screen */
-        dispose();
+
     }//GEN-LAST:event_jLabel1ComponentShown
+
+    private void SpashPanelComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_SpashPanelComponentShown
+
+    }//GEN-LAST:event_SpashPanelComponentShown
+
+    private void SpashPanelFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_SpashPanelFocusGained
+
+    }//GEN-LAST:event_SpashPanelFocusGained
 
     /**
      * @param args the command line arguments

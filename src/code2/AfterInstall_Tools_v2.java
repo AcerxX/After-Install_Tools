@@ -23,11 +23,14 @@ public class AfterInstall_Tools_v2 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         // TODO code application logic here
         System.out.println("<----Copywright(C) 2014 Mihai Alexandru--->");
         System.out.println("::LOG:: Works!");
         System.out.println("::LOG:: Starting splash app...");
-        grafic2.SplashV2.main(new String[0]);
+        grafic2.SplashV2 splash = new grafic2.SplashV2();
+        splash.setVisible(true);
+        Thread.sleep(2000);
+        splash.dispose();
     }
 }
