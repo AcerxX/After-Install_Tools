@@ -31,14 +31,26 @@ public class AfterInstall_Tools_v2 {
         System.out.println("::LOG:: Works!!!");
         System.out.println("::LOG:: Starting splash screen version 2.0...");
         
-        /* Showing splash screen for 2 seconds */
+        /* Showing splash screen for 3 seconds */
         grafic2.SplashV2 splash = new grafic2.SplashV2();
         splash.setVisible(true);
         splash.setBackground(new Color(1.0f,1.0f,1.0f,0.0f));
         Thread.sleep(3000);
         splash.dispose();
         
-        grafic.Splash x = new grafic.Splash();
-        x.setVisible(true);
+        /* Activate the main app with a dropdown */
+        grafic2.MainApp mainApp = new grafic2.MainApp();
+        mainApp.setVisible(true);
+        mainApp.setSize(350, 0);
+        while(true){
+            if(mainApp.getSize().height == 550)
+                break;
+            else
+                mainApp.setSize(350, mainApp.getSize().height+1);
+            mainApp.invalidate();
+            mainApp.validate();
+            mainApp.repaint();
+            Thread.sleep(1);
+        }
     }
 }
