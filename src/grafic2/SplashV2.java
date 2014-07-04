@@ -40,7 +40,7 @@ public class SplashV2 extends javax.swing.JFrame {
         setUndecorated(true);
         setResizable(false);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Andreea\\Documents\\GitHub\\After-Install_Tools\\data\\images\\cooltext1616994426.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\alexa_000\\Documents\\GitHub\\After-Install_Tools\\data\\images\\cooltext1616994426.png")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

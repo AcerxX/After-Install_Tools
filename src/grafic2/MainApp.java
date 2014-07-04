@@ -49,6 +49,7 @@ public class MainApp extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
         presetPanel = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jButton5 = new javax.swing.JButton();
@@ -74,7 +75,7 @@ public class MainApp extends javax.swing.JFrame {
         jTextArea1.setColumns(19);
         jTextArea1.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jTextArea1.setRows(5);
-        jTextArea1.setText("     By clicking on the Next button you agree with\nthe Terms of Use and Conditions of Google\nChrome, Skype, WinRar, VLC Media Player, Java,\nAdobe Reader, uTorrent and League of Legends.\n\n     This is an very ealry build of the version 2 of \nthe After-Install Tools, that is not recommended\nfor use. This build is for VISUAL DEVELOPMENT \nONLY and has NO UTILITY.\n\n     If you want to use After-Install Tools please use\nthe first version of the app located in the \"code\"\nand \"grafic\" packages. ");
+        jTextArea1.setText("     After-Install Tools v2 Customer Preview\n\n     By clicking on the Next button you agree with\nthe Terms of Use and Conditions of Google\nChrome, Skype, WinRar, VLC Media Player, Java,\nAdobe Reader, uTorrent and League of Legends.\n\n     This is a very ealry build of the version 2 of \nthe After-Install Tools and is not recommended\nfor use. This build is for VISUAL DEVELOPMENT \nONLY therefore named as CUSTOMER PREVIEW.");
         jTextArea1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jTextArea1.setDragEnabled(true);
         jTextArea1.setFocusable(false);
@@ -138,6 +139,7 @@ public class MainApp extends javax.swing.JFrame {
 
         jButton4.setFont(new java.awt.Font("Trebuchet MS", 0, 11)); // NOI18N
         jButton4.setText("Create your own package");
+        jButton4.setEnabled(false);
 
         jButton8.setText("Back");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -146,25 +148,31 @@ public class MainApp extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setText("Second option disabled as it is not implemented.");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(jPanel2Layout.createSequentialGroup()
                             .addContainerGap()
-                            .addComponent(jButton8))
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                            .addGap(10, 10, 10)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                .addGap(15, 15, 15))
+                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jButton8))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(49, 49, 49)
+                        .addComponent(jLabel4)))
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -175,7 +183,9 @@ public class MainApp extends javax.swing.JFrame {
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                .addGap(31, 31, 31)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                 .addComponent(jButton8)
                 .addContainerGap())
         );
@@ -259,9 +269,9 @@ public class MainApp extends javax.swing.JFrame {
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE))
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(presetPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(presetPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE))
         );
         jLayeredPane1Layout.setVerticalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -269,9 +279,9 @@ public class MainApp extends javax.swing.JFrame {
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 553, Short.MAX_VALUE))
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(presetPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(presetPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 553, Short.MAX_VALUE))
         );
         jLayeredPane1.setLayer(jPanel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(jPanel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -294,16 +304,19 @@ public class MainApp extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         dispose();
+        System.out.println("::LOG:: Exit!");
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
         grafic.StandardPackage.main(new String[0]);
         dispose();
+        System.out.println("::LOG:: Standard Package chosen!");
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        System.out.println("::LOG:: Terms accepted!");
         jPanel1.setVisible(false);
         jPanel1.disable();
         jPanel2.setVisible(true);
@@ -312,6 +325,7 @@ public class MainApp extends javax.swing.JFrame {
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
+        System.out.println("::LOG:: Back!");
         jPanel2.setVisible(false);
         jPanel2.disable();
         jPanel1.setVisible(true);
@@ -322,12 +336,14 @@ public class MainApp extends javax.swing.JFrame {
         // TODO add your handling code here:
         grafic.GamerPackage.main(new String[0]);
         dispose();
+        System.out.println("::LOG:: Gamer Package chosen!");
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
         grafic.OfficePackage.main(new String[0]);
         dispose();
+        System.out.println("::LOG:: Office Package chosen!");
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -336,6 +352,7 @@ public class MainApp extends javax.swing.JFrame {
         jPanel2.disable();
         presetPanel.setVisible(true);
         presetPanel.enable();
+        System.out.println("::LOG:: Preset Package chosen!");        
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
@@ -343,6 +360,7 @@ public class MainApp extends javax.swing.JFrame {
         presetPanel.disable();
         jPanel2.setVisible(true);
         jPanel2.enable();
+        System.out.println("::LOG:: Back!");
     }//GEN-LAST:event_jButton9ActionPerformed
 
     /**
@@ -387,6 +405,7 @@ public class MainApp extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLayeredPane jLayeredPane1;
     public javax.swing.JPanel jPanel1;
     public javax.swing.JPanel jPanel2;

@@ -46,10 +46,10 @@
                   <Component id="jPanel1" alignment="1" max="32767" attributes="0"/>
               </Group>
               <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
-                  <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jPanel2" alignment="0" pref="400" max="32767" attributes="0"/>
               </Group>
               <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
-                  <Component id="presetPanel" alignment="0" max="32767" attributes="0"/>
+                  <Component id="presetPanel" alignment="0" pref="400" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -60,10 +60,10 @@
                   <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
               </Group>
               <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
-                  <Component id="jPanel2" alignment="1" max="32767" attributes="0"/>
+                  <Component id="jPanel2" alignment="1" pref="553" max="32767" attributes="0"/>
               </Group>
               <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
-                  <Component id="presetPanel" alignment="1" max="32767" attributes="0"/>
+                  <Component id="presetPanel" alignment="1" pref="553" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -147,7 +147,7 @@
                       <Font name="Trebuchet MS" size="14" style="0"/>
                     </Property>
                     <Property name="rows" type="int" value="5"/>
-                    <Property name="text" type="java.lang.String" value="     By clicking on the Next button you agree with&#xa;the Terms of Use and Conditions of Google&#xa;Chrome, Skype, WinRar, VLC Media Player, Java,&#xa;Adobe Reader, uTorrent and League of Legends.&#xa;&#xa;     This is an very ealry build of the version 2 of &#xa;the After-Install Tools, that is not recommended&#xa;for use. This build is for VISUAL DEVELOPMENT &#xa;ONLY and has NO UTILITY.&#xa;&#xa;     If you want to use After-Install Tools please use&#xa;the first version of the app located in the &quot;code&quot;&#xa;and &quot;grafic&quot; packages. "/>
+                    <Property name="text" type="java.lang.String" value="     After-Install Tools v2 Customer Preview&#xa;&#xa;     By clicking on the Next button you agree with&#xa;the Terms of Use and Conditions of Google&#xa;Chrome, Skype, WinRar, VLC Media Player, Java,&#xa;Adobe Reader, uTorrent and League of Legends.&#xa;&#xa;     This is a very ealry build of the version 2 of &#xa;the After-Install Tools and is not recommended&#xa;for use. This build is for VISUAL DEVELOPMENT &#xa;ONLY therefore named as CUSTOMER PREVIEW."/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                       <Color id="Default Cursor"/>
                     </Property>
@@ -184,27 +184,33 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton4" min="-2" pref="325" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jButton8" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jButton4" min="-2" pref="325" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jButton3" max="32767" attributes="0"/>
-                                      <Component id="jLabel2" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jButton8" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="jButton3" max="32767" attributes="0"/>
+                                          <Component id="jLabel2" max="32767" attributes="0"/>
+                                      </Group>
                                   </Group>
                               </Group>
                           </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -217,7 +223,9 @@
                       <Component id="jButton3" min="-2" pref="130" max="-2" attributes="0"/>
                       <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
                       <Component id="jButton4" min="-2" pref="127" max="-2" attributes="0"/>
-                      <EmptySpace pref="79" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="37" max="32767" attributes="0"/>
                       <Component id="jButton8" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -250,6 +258,7 @@
                   <Font name="Trebuchet MS" size="11" style="0"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Create your own package"/>
+                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton8">
@@ -259,6 +268,11 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton8ActionPerformed"/>
               </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel4">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Second option disabled as it is not implemented."/>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>
