@@ -60,12 +60,12 @@ public class AfterInstall_Tools {
         
         /* Dropdown */
         System.out.println("::LOG:: Dropping down the app...");
-        mainApp.setSize(350, 0);
+        mainApp.setSize(400, 0);
         while(true){
             if(mainApp.getSize().height == 550)
                 break;
             else
-                mainApp.setSize(350, mainApp.getSize().height+2);
+                mainApp.setSize(400, mainApp.getSize().height+2);
             mainApp.invalidate();
             mainApp.validate();
             mainApp.repaint();
