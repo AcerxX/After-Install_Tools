@@ -54,8 +54,10 @@ public class AfterInstall_Tools {
         mainApp.jPanel1.setVisible(false);
         mainApp.jPanel2.setVisible(false);
         mainApp.presetPanel.setVisible(false);
+        mainApp.jPanel3.setVisible(false);
         mainApp.jPanel2.disable();
-        mainApp.presetPanel.disable();        
+        mainApp.presetPanel.disable();
+        mainApp.jPanel3.disable();
         mainApp.setVisible(true);
         
         /* Dropdown */
